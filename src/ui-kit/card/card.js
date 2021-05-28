@@ -4,7 +4,7 @@ import './card.scss';
 function Card(props) {
     return(
         <div className="card">
-            {props}
+            {props.children}
         </div>
     );
 };
