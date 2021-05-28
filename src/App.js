@@ -12,13 +12,13 @@ function App() {
       <Container>
         <div className="row">
           <Card className="center-text">
-            <i className="fa fa-spinner fa-spin"></i>
+            <i className="fa fa-map fa-2x"></i>
           </Card>
           <Card>
-            <i className="fa fa-spinner fa-spin"></i>
+            <i className="fa fa-users fa-2x"></i>
           </Card>
           <Card>
-            <i className="fa fa-spinner fa-spin"></i>
+            <i className="fa fa-medkit fa-2x"></i>
           </Card>
         </div>
       </Container>
