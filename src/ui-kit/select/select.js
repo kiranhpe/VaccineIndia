@@ -22,7 +22,7 @@ export default class DropDown extends Component {
         <Select
           value={selectedOption}
           onChange={this.handleChange}
-          options={this.props.states}
+          options={this.props.data}
           placeholder={'Select ' + this.props.placeholder} 
         />
       </div>

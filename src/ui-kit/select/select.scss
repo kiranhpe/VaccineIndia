@@ -8,3 +8,9 @@
         border-radius: 4px;
     }
 }
+
+@media screen and (max-width: 480px) {
+    .select {
+        margin: 0px 0px 10px;
+    }
+  }
