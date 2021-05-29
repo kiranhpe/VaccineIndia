@@ -8,7 +8,6 @@ export default class DropDown extends Component {
   state = {};
   handleChange = (selectedOption) => {
     this.setState({ selectedOption });
-    console.log(`Option selected:`, selectedOption);
     this.props.onStateChange(selectedOption);
   };
 
@@ -23,7 +22,8 @@ export default class DropDown extends Component {
           value={selectedOption}
           onChange={this.handleChange}
           options={this.props.data}
-          placeholder={'Select ' + this.props.placeholder} 
+          placeholder={'Select ' + this.props.placeholder}
+          isLoading={this.props.isLoading}
         />
       </div>
     );

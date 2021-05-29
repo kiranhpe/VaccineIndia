@@ -41,7 +41,6 @@ export default class TopCards extends Component {
         });
        this.setState({states:this.states[0].state_id});
 
-       console.log(this.state)
       });
   }
 }
