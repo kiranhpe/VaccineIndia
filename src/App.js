@@ -1,29 +1,27 @@
-import Card from "./ui-kit/card/card";
 import "./App.scss";
 import Toolbar from "./ui-kit/toolbar/toolbar";
 import Container from "./ui-kit/container/container";
+import React from "react";
+import TopCards from "./pages/top-cards/top-cards";
+import StateFilter from "./pages/state-filter/state-filter";
 
-function App() {
-  return (
-    <>
-      <Toolbar>
-        <div><p className="app-name">INDIA Vaccine</p></div>
-      </Toolbar>
-      <Container>
-        <div className="row">
-          <Card className="center-text">
-            <i className="fa fa-map fa-2x"></i>
-          </Card>
-          <Card>
-            <i className="fa fa-users fa-2x"></i>
-          </Card>
-          <Card>
-            <i className="fa fa-medkit fa-2x"></i>
-          </Card>
-        </div>
-      </Container>
-    </>
-  );
+export default class App extends React.Component {
+  constructor() {
+    super();
+  }
+  render() {
+    return (
+      <>
+        <Toolbar>
+          <div className="brand">
+            <p className="brand-name">Vaccine INDIA</p>
+          </div>
+        </Toolbar>
+        <Container>
+          <StateFilter></StateFilter>
+          <TopCards></TopCards>
+        </Container>
+      </>
+    );
+  }
 }
-
-export default App;

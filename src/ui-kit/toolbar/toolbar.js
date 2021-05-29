@@ -1,11 +1,15 @@
-import './toolbar.scss';
+import React from "react";
+import "./toolbar.scss";
 
-function Toolbar(props) {
+export default class Toolbar extends React.Component {
+  constructor(props) {
+    super(props);
+  }
+  render() {
     return (
-    <>
-    <div className="toolbar">{props.children}</div>
-    </>
+      <>
+        <div className="toolbar">{this.props.children}</div>
+      </>
     );
-};
-
-export default Toolbar;
+  }
+}

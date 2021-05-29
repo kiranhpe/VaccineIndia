@@ -1,12 +1,12 @@
-import React from 'react';
-import './card.scss';
+import React from "react";
+import "./card.scss";
 
-function Card(props) {
-    return(
-        <div className="card">
-            {props.children}
-        </div>
-    );
-};
+export default class Card extends React.Component {
+  constructor(props) {
+    super(props);
+  }
 
-export default Card;
+  render() {
+    return <div className="card">{this.props.children}</div>;
+  }
+}

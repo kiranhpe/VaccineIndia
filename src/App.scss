@@ -1,12 +1,4 @@
-
 @import './assets/styles/variables.scss';
-
-.row {
-    display: grid;
-    grid-template-columns: 1fr 1fr 1fr;
-    width: 100%;
-    grid-gap: 8px;
-}
 
 .center-text {
     margin: auto;
@@ -19,9 +11,3 @@
         font-size: 24px;
     }
 }
-/* On screens that are 992px or less, set the background color to blue */
-@media screen and (max-width: 480px) {
-    .row {
-        grid-template-columns: 1fr;
-    }
-  }

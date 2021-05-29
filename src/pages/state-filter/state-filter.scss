@@ -1,0 +1,11 @@
+.row-right {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-gap: 8px
+}
+
+@media screen and (max-width: 480px) {
+    .row-right {
+        grid-template-columns: 1fr;
+    }
+  }
