@@ -3,6 +3,7 @@ import { API } from "../../common/enums/API.enum";
 import APIService from "../../common/service/api.service";
 import getTodayDate from "../../common/utils/date";
 import Card from "../../ui-kit/card/card";
+import ProgressBar from "../../ui-kit/progress-bar/progress-bar";
 import Spinner from "../../ui-kit/spinner/spinner";
 
 import "./top-cards.scss";
@@ -22,35 +23,62 @@ export default class TopCards extends Component {
   render() {
     return (
       <div className="row">
-        <Card className="center-text">
+        <Card>
+          <div
+            className={this.state.sites.total == 0 ? "progress" : "no-display"}
+          >
+            <ProgressBar />
+          </div>
           <div className="stat-count">
             <i className="fa fa-map fa-2x"></i>
             <div className="content">
               <h4>Vaccine Centers</h4>
-              <h5>{this.state.sites.total > 0 ?this.state.sites.total.toLocaleString("en-IN"): ''}</h5>
-              <Spinner show={this.state.sites.total === 0}></Spinner>
+              <h5>
+                {this.state.sites.total > 0
+                  ? this.state.sites.total.toLocaleString("en-IN")
+                  : ""}
+              </h5>
               <p></p>
             </div>
           </div>
         </Card>
         <Card>
+          <div
+            className={
+              this.state.registration.total == 0 ? "progress" : "no-display"
+            }
+          >
+            <ProgressBar />
+          </div>
           <div className="stat-count">
             <i className="fa fa-users fa-2x"></i>
             <div className="content">
               <h4>Registered Users</h4>
-              <h5>{this.state.registration.total > 0 ? this.state.registration.total.toLocaleString("en-IN"): ''}</h5>
-              <Spinner show={this.state.registration.total === 0}></Spinner>
-
+              <h5>
+                {this.state.registration.total > 0
+                  ? this.state.registration.total.toLocaleString("en-IN")
+                  : ""}
+              </h5>
             </div>
           </div>
         </Card>
         <Card>
+          <div
+            className={
+              this.state.vaccination.total == 0 ? "progress" : "no-display"
+            }
+          >
+            <ProgressBar />
+          </div>
           <div className="stat-count">
             <i className="fa fa-medkit fa-2x"></i>
             <div className="content">
               <h4>Vaccines</h4>
-              <h5>{this.state.vaccination.total > 0 ? this.state.vaccination.total.toLocaleString("en-IN"): ''}</h5>
-              <Spinner show={this.state.vaccination.total === 0}></Spinner>
+              <h5>
+                {this.state.vaccination.total > 0
+                  ? this.state.vaccination.total.toLocaleString("en-IN")
+                  : ""}
+              </h5>
             </div>
           </div>
         </Card>
