@@ -26,7 +26,7 @@ export default class TopCards extends Component {
             <i className="fa fa-map fa-2x"></i>
             <div className="content">
               <h4>Vaccine Centers</h4>
-              <h5>{this.state.sites.total.toLocaleString()}</h5>
+              <h5>{this.state.sites.total.toLocaleString('en-IN')}</h5>
               <p></p>
             </div>
           </div>
@@ -36,7 +36,7 @@ export default class TopCards extends Component {
             <i className="fa fa-users fa-2x"></i>
             <div className="content">
               <h4>Registered Users</h4>
-              <h5>{this.state.registration.total.toLocaleString()}</h5>
+              <h5>{this.state.registration.total.toLocaleString('en-IN')}</h5>
             </div>
           </div>
         </Card>
@@ -45,7 +45,7 @@ export default class TopCards extends Component {
             <i className="fa fa-medkit fa-2x"></i>
             <div className="content">
               <h4>Vaccines</h4>
-              <h5>{this.state.vaccination.total.toLocaleString()}</h5>
+              <h5>{this.state.vaccination.total.toLocaleString('en-IN')}</h5>
             </div>
           </div>
         </Card>
