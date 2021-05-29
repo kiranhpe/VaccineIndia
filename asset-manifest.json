@@ -1,8 +1,8 @@
 {
   "files": {
     "main.css": "/VaccineIndia/static/css/main.48893fa3.chunk.css",
-    "main.js": "/VaccineIndia/static/js/main.7c92dc2d.chunk.js",
-    "main.js.map": "/VaccineIndia/static/js/main.7c92dc2d.chunk.js.map",
+    "main.js": "/VaccineIndia/static/js/main.a92ab54c.chunk.js",
+    "main.js.map": "/VaccineIndia/static/js/main.a92ab54c.chunk.js.map",
     "runtime-main.js": "/VaccineIndia/static/js/runtime-main.bcaca235.js",
     "runtime-main.js.map": "/VaccineIndia/static/js/runtime-main.bcaca235.js.map",
     "static/css/2.b86fdb0c.chunk.css": "/VaccineIndia/static/css/2.b86fdb0c.chunk.css",
@@ -21,6 +21,6 @@
     "static/css/2.b86fdb0c.chunk.css",
     "static/js/2.ef4ba8e2.chunk.js",
     "static/css/main.48893fa3.chunk.css",
-    "static/js/main.7c92dc2d.chunk.js"
+    "static/js/main.a92ab54c.chunk.js"
   ]
 }
