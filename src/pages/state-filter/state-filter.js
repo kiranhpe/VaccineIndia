@@ -1,4 +1,5 @@
 import React, { Component } from "react";
+import { API } from "../../common/enums/API.enum";
 import DropDown from "../../ui-kit/select/select";
 
 import "./state-filter.scss";
@@ -6,9 +7,10 @@ import "./state-filter.scss";
 export default class StateFilter extends Component {
   states = [];
 
+  state = {};
   selectFeed = [];
 
-  componentWillMount() {
+  componentDidMount() {
     this.fetchStates();
   }
 
@@ -20,24 +22,27 @@ export default class StateFilter extends Component {
       <div className="row-right">
         <DropDown
           placeholder="State"
-          states={this.selectFeed}
+          states={this.state.states}
           onStateChange={this.stateSelectedChange}
         ></DropDown>
-        <DropDown placeholder="District" states={this.selectFeed}></DropDown>
+        <DropDown
+          placeholder="District"
+          states={this.state.states}
+          onStateChange={this.stateSelectedChange}
+        ></DropDown>
       </div>
     );
   }
 
   fetchStates() {
-    fetch("https://cdn-api.co-vin.in/api/v2/admin/location/states")
+    fetch(API.States_API)
       .then((res) => res.json())
       .then((data) => {
         this.states = data.states;
         this.selectFeed = this.states.map((v) => {
-          return { value: v.state_id+'', label: v.state_name };
+          return { value: v.state_id + "", label: v.state_name };
         });
-
-        console.log(this.selectFeed)
+        this.setState({ states: this.selectFeed });
       });
   }
 }
