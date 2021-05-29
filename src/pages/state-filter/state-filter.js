@@ -1,5 +1,6 @@
 import React, { Component } from "react";
 import { API } from "../../common/enums/API.enum";
+import APIService from "../../common/service/api.service";
 import DropDown from "../../ui-kit/select/select";
 import "./state-filter.scss";
 export default class StateFilter extends Component {
@@ -9,7 +10,7 @@ export default class StateFilter extends Component {
     isStatesLoading: true,
     isDistrictsLoading: false,
   };
-
+  _api = new APIService();
   constructor() {
     super();
     this.stateSelectedChange = this.stateSelectedChange.bind(this);
@@ -47,27 +48,23 @@ export default class StateFilter extends Component {
   }
 
   fetchStates() {
-    fetch(API.States_API)
-      .then((res) => res.json())
-      .then((data) => {
-        this.selectStatesFeed = data.states.map((v) => {
-          return { value: v.state_id, label: v.state_name };
-        });
-        this.setState({ states: this.selectStatesFeed });
-        this.setState({ isStatesLoading: false });
-        this.setState({ isDistrictsLoading: true });
+    this._api.getData(API.States_API).then((data) => {
+      this.selectStatesFeed = data.states.map((v) => {
+        return { value: v.state_id, label: v.state_name };
       });
+      this.setState({ states: this.selectStatesFeed });
+      this.setState({ isStatesLoading: false });
+      this.setState({ isDistrictsLoading: true });
+    });
   }
 
   fetchDistricts(id) {
-    fetch(API.District_API + id.toString())
-      .then((res) => res.json())
-      .then((data) => {
-        let selectDistictsFeed = data.districts.map((v) => {
-          return { value: v.district_id, label: v.district_name };
-        });
-        this.setState({ districts: selectDistictsFeed });
-        this.setState({ isDistrictsLoading: false });
+    this._api.getData(API.District_API + id.toString()).then((data) => {
+      let selectDistictsFeed = data.districts.map((v) => {
+        return { value: v.district_id, label: v.district_name };
       });
+      this.setState({ districts: selectDistictsFeed });
+      this.setState({ isDistrictsLoading: false });
+    });
   }
 }
