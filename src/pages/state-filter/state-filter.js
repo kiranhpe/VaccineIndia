@@ -18,7 +18,7 @@ export default function StateFilter(props) {
 
   useEffect(() => {
     fetchStates();
-  }, false)
+  }, [])
 
   function stateSelectedChange(event) {
     setDistrictsLoading(true);

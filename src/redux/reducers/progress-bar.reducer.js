@@ -1,9 +1,9 @@
-const progressBarReducer = (state = true, action) => {
+const progressBarReducer = (_state = true, action) => {
     switch(action.type) {
         case 'HIDE' :
-            return !state;
+            return false;
         default :
-            return state;
+            return true;
     }
 }
 

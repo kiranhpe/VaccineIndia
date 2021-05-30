@@ -5,7 +5,7 @@ import getData from "../../common/service/api.service";
 import getTodayDate from "../../common/utils/date";
 import Card from "../../ui-kit/card/card";
 import ProgressBar from "../../ui-kit/progress-bar/progress-bar";
-import { hide } from '../../redux/actions/progress-bar.actions';
+import { hide } from "../../redux/actions/progress-bar.actions";
 import "./top-cards.scss";
 
 export default function TopCards(props) {
@@ -15,11 +15,12 @@ export default function TopCards(props) {
     vaccination: { total: 0, today: 0 },
   });
 
+  const dispatch = useDispatch();
+
   useEffect(() => {
     getCardsData();
-  },false);
+  }, [dispatch]);
 
-  useDispatch(hide());
   return (
     <div className="row">
       <Card>
@@ -96,6 +97,8 @@ export default function TopCards(props) {
         registration: { total: data.topBlock.registration.total },
         vaccination: { total: data.topBlock.vaccination.total },
       });
+      dispatch(hide());
+
     });
   }
 }
