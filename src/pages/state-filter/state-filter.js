@@ -1,70 +1,67 @@
-import React, { Component } from "react";
-import { API } from "../../common/enums/API.enum";
-import APIService from "../../common/service/api.service";
+import React from "react";
+import { District_API, States_API } from "../../common/enums/API.enum";
+import getData from "../../common/service/api.service";
 import DropDown from "../../ui-kit/select/select";
 import "./state-filter.scss";
-export default class StateFilter extends Component {
-  state = {
-    districts: [],
-    states: [],
-    isStatesLoading: true,
-    isDistrictsLoading: false,
-  };
-  _api = new APIService();
-  constructor() {
-    super();
-    this.stateSelectedChange = this.stateSelectedChange.bind(this);
+
+export default function StateFilter(props) {
+  const [states, setStates] = React.useState({
+    states: {},
+  });
+
+  const [districts, setDistricts] = React.useState({
+    districts: {},
+  });
+
+  const [statesLoading, setStatesLoading] = React.useState(true);
+
+  const [districtsLoading, setDistrictsLoading] = React.useState(false);
+
+  fetchStates();
+
+  function stateSelectedChange(event) {
+    setDistrictsLoading(true);
+    fetchDistricts(event.value);
   }
 
-  componentDidMount() {
-    this.fetchStates();
-  }
-
-  stateSelectedChange(event) {
-    this.setState({ isDistrictsLoading: true });
-    this.fetchDistricts(event.value);
-  }
-
-  districtSelectedChange(event) {
+  function districtSelectedChange(event) {
     // Todo: handle event state change
   }
-  render() {
-    return (
-      <div className="row-right">
-        <DropDown
-          placeholder="State"
-          data={this.state.states}
-          onStateChange={this.stateSelectedChange}
-          isLoading={this.state.isStatesLoading}
-        ></DropDown>
-        <DropDown
-          placeholder="District"
-          data={this.state.districts}
-          onStateChange={this.districtSelectedChange}
-          isLoading={this.state.isDistrictsLoading}
-        ></DropDown>
-      </div>
-    );
-  }
+  return (
+    <div className="row-right">
+      <DropDown
+        placeholder="State"
+        data={states.states}
+        onStateChange={stateSelectedChange}
+        isLoading={statesLoading}
+      ></DropDown>
+      <DropDown
+        placeholder="District"
+        data={districts.districts}
+        onStateChange={districtSelectedChange}
+        isLoading={districtsLoading}
+      ></DropDown>
+    </div>
+  );
 
-  fetchStates() {
-    this._api.getData(API.States_API).then((data) => {
-      this.selectStatesFeed = data.states.map((v) => {
+  function fetchStates() {
+    getData(States_API()).then((data) => {
+      let selectStatesFeed = data.states.map((v) => {
         return { value: v.state_id, label: v.state_name };
       });
-      this.setState({ states: this.selectStatesFeed });
-      this.setState({ isStatesLoading: false });
-      this.setState({ isDistrictsLoading: true });
+      setStates({ states: selectStatesFeed });
+      setStatesLoading(false);
+      setDistrictsLoading(true);
     });
   }
 
-  fetchDistricts(id) {
-    this._api.getData(API.District_API + id.toString()).then((data) => {
+  function fetchDistricts(id) {
+    getData(District_API() + id.toString()).then((data) => {
       let selectDistictsFeed = data.districts.map((v) => {
         return { value: v.district_id, label: v.district_name };
       });
-      this.setState({ districts: selectDistictsFeed });
-      this.setState({ isDistrictsLoading: false });
+      setDistricts({ districts: selectDistictsFeed });
+      setDistrictsLoading(false);
     });
   }
 }

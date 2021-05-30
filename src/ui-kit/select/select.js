@@ -1,31 +1,21 @@
-import React, { Component } from "react";
+import React from "react";
 import Select from "react-select";
 import "./select.scss";
-const options = [
- 
-];
-export default class DropDown extends Component {
-  state = {};
-  handleChange = (selectedOption) => {
-    this.setState({ selectedOption });
-    this.props.onStateChange(selectedOption);
+export default function DropDown(props) {
+  const [selectedOption, setSelectedOption] = React.useState(0);
+  const handleChange = (selectedOption) => {
+    setSelectedOption(selectedOption);
+    props.onStateChange(selectedOption);
   };
-
-  constructor(props) {
-    super(props);
-  }
-  render() {
-    const { selectedOption } = this.state;
-    return (
-      <div className="select">
-        <Select
-          value={selectedOption}
-          onChange={this.handleChange}
-          options={this.props.data}
-          placeholder={'Select ' + this.props.placeholder}
-          isLoading={this.props.isLoading}
-        />
-      </div>
-    );
-  }
+  return (
+    <div className="select">
+      <Select
+        value={selectedOption}
+        onChange={handleChange}
+        options={props.data}
+        placeholder={"Select " + props.placeholder}
+        isLoading={props.isLoading}
+      />
+    </div>
+  );
 }
