@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useEffect } from "react";
 import { useDispatch } from "react-redux";
 import { Dashboard_API } from "../../common/enums/API.enum";
 import getData from "../../common/service/api.service";
@@ -15,7 +15,9 @@ export default function TopCards(props) {
     vaccination: { total: 0, today: 0 },
   });
 
-  getCardsData();
+  useEffect(() => {
+    getCardsData();
+  },false);
 
   useDispatch(hide());
   return (

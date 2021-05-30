@@ -1,12 +1,9 @@
-import React from "react";
+import React, { useEffect } from "react";
 import { District_API, States_API } from "../../common/enums/API.enum";
 import getData from "../../common/service/api.service";
 import DropDown from "../../ui-kit/select/select";
 import "./state-filter.scss";
-
-const areEqual = (prevProps, nextProps) => true;
-
-const StateFilter = React.memo(props => {
+export default function StateFilter(props) {
   const [states, setStates] = React.useState({
     states: {},
   });
@@ -19,7 +16,9 @@ const StateFilter = React.memo(props => {
 
   const [districtsLoading, setDistrictsLoading] = React.useState(false);
 
-  fetchStates();
+  useEffect(() => {
+    fetchStates();
+  }, false)
 
   function stateSelectedChange(event) {
     setDistrictsLoading(true);
@@ -29,6 +28,7 @@ const StateFilter = React.memo(props => {
   function districtSelectedChange(event) {
     // Todo: handle event state change
   }
+
   return (
     <div className="row-right">
       <DropDown
@@ -66,6 +66,4 @@ const StateFilter = React.memo(props => {
       setDistrictsLoading(false);
     });
   }
-},areEqual);
-
-export default StateFilter;
+}
