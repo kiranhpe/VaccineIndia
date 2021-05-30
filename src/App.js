@@ -22,7 +22,7 @@ export default function App() {
         <StateFilter></StateFilter>
         <TopCards></TopCards>
         <div className="palce-holder">
-          <h4>Work In Progress.....</h4>
+          <h4>Work In Progress..... (Beta)</h4>
         </div>
       </Container>
     </>
