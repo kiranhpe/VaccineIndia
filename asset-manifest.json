@@ -1,26 +1,26 @@
 {
   "files": {
     "main.css": "/VaccineIndia/static/css/main.6c468d42.chunk.css",
-    "main.js": "/VaccineIndia/static/js/main.89f53c9b.chunk.js",
-    "main.js.map": "/VaccineIndia/static/js/main.89f53c9b.chunk.js.map",
-    "runtime-main.js": "/VaccineIndia/static/js/runtime-main.8844022e.js",
-    "runtime-main.js.map": "/VaccineIndia/static/js/runtime-main.8844022e.js.map",
+    "main.js": "/VaccineIndia/static/js/main.358543cb.chunk.js",
+    "main.js.map": "/VaccineIndia/static/js/main.358543cb.chunk.js.map",
+    "runtime-main.js": "/VaccineIndia/static/js/runtime-main.51dcb74d.js",
+    "runtime-main.js.map": "/VaccineIndia/static/js/runtime-main.51dcb74d.js.map",
     "static/css/2.b86fdb0c.chunk.css": "/VaccineIndia/static/css/2.b86fdb0c.chunk.css",
-    "static/js/2.6f564a7b.chunk.js": "/VaccineIndia/static/js/2.6f564a7b.chunk.js",
-    "static/js/2.6f564a7b.chunk.js.map": "/VaccineIndia/static/js/2.6f564a7b.chunk.js.map",
-    "static/js/3.90732d30.chunk.js": "/VaccineIndia/static/js/3.90732d30.chunk.js",
-    "static/js/3.90732d30.chunk.js.map": "/VaccineIndia/static/js/3.90732d30.chunk.js.map",
+    "static/js/2.4bece434.chunk.js": "/VaccineIndia/static/js/2.4bece434.chunk.js",
+    "static/js/2.4bece434.chunk.js.map": "/VaccineIndia/static/js/2.4bece434.chunk.js.map",
+    "static/js/3.e137bdbf.chunk.js": "/VaccineIndia/static/js/3.e137bdbf.chunk.js",
+    "static/js/3.e137bdbf.chunk.js.map": "/VaccineIndia/static/js/3.e137bdbf.chunk.js.map",
     "index.html": "/VaccineIndia/index.html",
     "static/css/2.b86fdb0c.chunk.css.map": "/VaccineIndia/static/css/2.b86fdb0c.chunk.css.map",
     "static/css/main.6c468d42.chunk.css.map": "/VaccineIndia/static/css/main.6c468d42.chunk.css.map",
-    "static/js/2.6f564a7b.chunk.js.LICENSE.txt": "/VaccineIndia/static/js/2.6f564a7b.chunk.js.LICENSE.txt",
+    "static/js/2.4bece434.chunk.js.LICENSE.txt": "/VaccineIndia/static/js/2.4bece434.chunk.js.LICENSE.txt",
     "static/media/font-awesome.min.css": "/VaccineIndia/static/media/fontawesome-webfont.f691f37e.woff"
   },
   "entrypoints": [
-    "static/js/runtime-main.8844022e.js",
+    "static/js/runtime-main.51dcb74d.js",
     "static/css/2.b86fdb0c.chunk.css",
-    "static/js/2.6f564a7b.chunk.js",
+    "static/js/2.4bece434.chunk.js",
     "static/css/main.6c468d42.chunk.css",
-    "static/js/main.89f53c9b.chunk.js"
+    "static/js/main.358543cb.chunk.js"
   ]
 }
