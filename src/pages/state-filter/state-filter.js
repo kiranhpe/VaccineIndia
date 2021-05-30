@@ -4,7 +4,9 @@ import getData from "../../common/service/api.service";
 import DropDown from "../../ui-kit/select/select";
 import "./state-filter.scss";
 
-export default function StateFilter(props) {
+const areEqual = (prevProps, nextProps) => true;
+
+const StateFilter = React.memo(props => {
   const [states, setStates] = React.useState({
     states: {},
   });
@@ -64,4 +66,6 @@ export default function StateFilter(props) {
       setDistrictsLoading(false);
     });
   }
-}
+},areEqual);
+
+export default StateFilter;

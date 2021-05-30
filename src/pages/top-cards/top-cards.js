@@ -1,10 +1,11 @@
 import React from "react";
+import { useDispatch } from "react-redux";
 import { Dashboard_API } from "../../common/enums/API.enum";
 import getData from "../../common/service/api.service";
 import getTodayDate from "../../common/utils/date";
 import Card from "../../ui-kit/card/card";
 import ProgressBar from "../../ui-kit/progress-bar/progress-bar";
-
+import { hide } from '../../redux/actions/progress-bar.actions';
 import "./top-cards.scss";
 
 export default function TopCards(props) {
@@ -13,8 +14,10 @@ export default function TopCards(props) {
     registration: { total: 0, today: 0 },
     vaccination: { total: 0, today: 0 },
   });
+
   getCardsData();
 
+  useDispatch(hide());
   return (
     <div className="row">
       <Card>
