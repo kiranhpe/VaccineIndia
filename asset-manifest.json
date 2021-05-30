@@ -1,26 +1,26 @@
 {
   "files": {
-    "main.css": "/VaccineIndia/static/css/main.6c468d42.chunk.css",
-    "main.js": "/VaccineIndia/static/js/main.ef029724.chunk.js",
-    "main.js.map": "/VaccineIndia/static/js/main.ef029724.chunk.js.map",
+    "main.css": "/VaccineIndia/static/css/main.d089d73f.chunk.css",
+    "main.js": "/VaccineIndia/static/js/main.ee76fdff.chunk.js",
+    "main.js.map": "/VaccineIndia/static/js/main.ee76fdff.chunk.js.map",
     "runtime-main.js": "/VaccineIndia/static/js/runtime-main.51dcb74d.js",
     "runtime-main.js.map": "/VaccineIndia/static/js/runtime-main.51dcb74d.js.map",
     "static/css/2.b86fdb0c.chunk.css": "/VaccineIndia/static/css/2.b86fdb0c.chunk.css",
-    "static/js/2.4bece434.chunk.js": "/VaccineIndia/static/js/2.4bece434.chunk.js",
-    "static/js/2.4bece434.chunk.js.map": "/VaccineIndia/static/js/2.4bece434.chunk.js.map",
+    "static/js/2.ee7f7f06.chunk.js": "/VaccineIndia/static/js/2.ee7f7f06.chunk.js",
+    "static/js/2.ee7f7f06.chunk.js.map": "/VaccineIndia/static/js/2.ee7f7f06.chunk.js.map",
     "static/js/3.e137bdbf.chunk.js": "/VaccineIndia/static/js/3.e137bdbf.chunk.js",
     "static/js/3.e137bdbf.chunk.js.map": "/VaccineIndia/static/js/3.e137bdbf.chunk.js.map",
     "index.html": "/VaccineIndia/index.html",
     "static/css/2.b86fdb0c.chunk.css.map": "/VaccineIndia/static/css/2.b86fdb0c.chunk.css.map",
-    "static/css/main.6c468d42.chunk.css.map": "/VaccineIndia/static/css/main.6c468d42.chunk.css.map",
-    "static/js/2.4bece434.chunk.js.LICENSE.txt": "/VaccineIndia/static/js/2.4bece434.chunk.js.LICENSE.txt",
+    "static/css/main.d089d73f.chunk.css.map": "/VaccineIndia/static/css/main.d089d73f.chunk.css.map",
+    "static/js/2.ee7f7f06.chunk.js.LICENSE.txt": "/VaccineIndia/static/js/2.ee7f7f06.chunk.js.LICENSE.txt",
     "static/media/font-awesome.min.css": "/VaccineIndia/static/media/fontawesome-webfont.f691f37e.woff"
   },
   "entrypoints": [
     "static/js/runtime-main.51dcb74d.js",
     "static/css/2.b86fdb0c.chunk.css",
-    "static/js/2.4bece434.chunk.js",
-    "static/css/main.6c468d42.chunk.css",
-    "static/js/main.ef029724.chunk.js"
+    "static/js/2.ee7f7f06.chunk.js",
+    "static/css/main.d089d73f.chunk.css",
+    "static/js/main.ee76fdff.chunk.js"
   ]
 }
