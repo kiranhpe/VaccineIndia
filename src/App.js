@@ -9,6 +9,7 @@ import ProgressBar from "./ui-kit/progress-bar/progress-bar";
 import { hide } from "./redux/actions/progress-bar.actions";
 import Card from "./ui-kit/card/card";
 import Maps from "./pages/maps/map";
+import SecondRow from "./pages/second-row/second-row";
 
 export default function App() {
   const showProgressbar = useSelector((state) => state.progressBar);
@@ -23,9 +24,9 @@ export default function App() {
       <Container>
         <StateFilter></StateFilter>
         <TopCards></TopCards>
-        <Card>
-          <Maps></Maps>
-        </Card>
+        <div className="second-row">
+          <SecondRow></SecondRow>
+        </div>
         <div className="palce-holder">
           <h4>Work In Progress..... (Beta)</h4>
         </div>
